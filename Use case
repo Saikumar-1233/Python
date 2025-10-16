@@ -1,0 +1,16 @@
+import re
+
+# Step 1: Input from user
+text = input("Enter a string: ")
+
+# Step 2: Define a pattern for repeated letters
+pattern = r"(.)\1"
+
+# Step 3: Search for the pattern
+match = re.search(pattern, text)
+
+# Step 4: Display result
+if match:
+    print("Pattern found:", match.group())
+else:
+    print("No repeating pattern found.")
